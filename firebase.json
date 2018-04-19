@@ -1,0 +1,19 @@
+{
+  "functions": {
+    "predeploy": "npm --prefix functions install"
+  },
+  "database": {
+    "rules": "database-rules.json"
+  },
+  "storage": {
+    "rules": "storage.rules"
+  },
+  "hosting": {
+    "predeploy": "npm run build",
+    "public": "public",
+    "rewrites": [{
+      "source": "**",
+      "destination": "/index.html"
+    }]
+  }
+}
